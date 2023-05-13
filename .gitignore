@@ -4,6 +4,9 @@
 # Apple
 *.DS_Store
 
+# IDE
+*.vscode
+
 # Compiled Object files
 *.slo
 *.lo
