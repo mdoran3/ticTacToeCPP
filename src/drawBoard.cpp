@@ -4,6 +4,8 @@
 
 using namespace std;
 
+char board[9] = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+
 void draw(char board[9]) {
     cout << "     |     |      \n";
     cout << "  " << board[0] << "  |  " << board[1] << "  |  " << board[2] << "\n";
