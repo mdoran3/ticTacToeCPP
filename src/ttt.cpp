@@ -1,14 +1,13 @@
 #include "drawBoard.h"
 #include "dice.h"
 #include "playGame.h"
+#include "board.h"
 #include <string>
 #include <iostream>
 #include <thread>
 #include <random>
 
 using namespace std;
-
-char board[9] = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
 
 //random generator of either 0 or 1
 int XorO() {
@@ -21,6 +20,17 @@ int XorO() {
     
     // Generate a random number between 0 and 1
     int randomValue = dist(gen);
+
+    if (randomValue == 0) {
+        cout << "\n\nO's are up first!\n\n\n";
+        draw(board);
+        play(0);
+    }
+    else if (randomValue ==1) {
+        cout << "\n\nX's are up first!\n\n\n";
+        draw(board);
+        play(1);
+    }
     
     return 0;
 }
@@ -35,17 +45,24 @@ int main() {
          << " \\/   |_|\\___|  \\/   \\__,_|\\___|  \\/   \\___/ \\___|\n"
          << "                                                  \n";
 
+    //draw tic-tac-toe board
     draw(board);
     
+    //run ascii dice animation
     rollDice();
 
-    if (XorO == 0) {
-        cout << "\n\nO's are up first!\n";
-        play(0);
+    //select if Xs of Os go first
+    XorO();
+
+    char input;
+    printf("\n\nWould you like to play again? (y/n)\n");
+    cin >> input;
+
+    if (input == 'y') {
+        main();
     }
-    else {
-        cout << "\n\nX's are up first!\n";
-        play(1);
+    else if (input == 'n') {
+        printf("Thank you for playing!\n");
     }
     
     return 0;

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <thread>
+#include "board.h"
 #include "drawBoard.h"
 
 using namespace std;
