@@ -130,7 +130,7 @@ int playO() {
     //draw(board);
 
     int input;
-    cout << "0 TURN\n";
+    cout << "O TURN\n";
     cout << "Where would you like to place your O? (type an available number 1-9): \n";
     cin >> input;
     if (input < 1 || input > 9) {
