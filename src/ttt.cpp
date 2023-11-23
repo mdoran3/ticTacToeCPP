@@ -59,6 +59,7 @@ int main() {
     cin >> input;
 
     if (input == 'y') {
+        clearBoard();
         main();
     }
     else if (input == 'n') {

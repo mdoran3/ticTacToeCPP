@@ -6,4 +6,6 @@
 
 void draw(char board[9]);
 
+void clearBoard();
+
 #endif
