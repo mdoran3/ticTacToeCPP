@@ -6,6 +6,8 @@
 
 using namespace std;
 
+int totalTurns = 0;
+
 int play(int xo) {
     int firstChoice = xo;
     if (firstChoice == 0) {
@@ -147,6 +149,11 @@ int playO() {
         draw(board);
         printf("\n\n\n");
         if (checkWinO() == false) {
+            totalTurns++;
+            if (totalTurns == 9) {
+                printf("\n\nDRAW! NO WINNER! TIC-TAC-TOE - DRAW! NO WINNER!\n\n");
+                return 0;
+            }
             playX();
         }
         else {
@@ -181,6 +188,11 @@ int playX() {
         draw(board);
         printf("\n\n\n");
         if (checkWinX() == false) {
+            totalTurns++;
+            if (totalTurns == 9) {
+                printf("\n\nDRAW! NO WINNER! TIC-TAC-TOE - DRAW! NO WINNER!\n\n");
+                return 0;
+            }
             playO();
         }
         else {
