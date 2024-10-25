@@ -1,8 +1,12 @@
 # ticTacToeCPP
 A command line Tic-Tac-Toe game implementation in C++
 
-Compile command:
+`Compile command`
+```
 g++ ttt.cpp playGame.cpp drawBoard.cpp dice.cpp -o ttt
+```
 
-Run game:
+`Run game`
+```
 ./ttt
+```
